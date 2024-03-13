@@ -2,7 +2,6 @@ $(window).on('load', function() {
     $('.pcalon').addClass('muncul');
     $('.pketcountdown').addClass('muncul');
     $('.pket1').addClass('muncul');
-    $('.lhtundangan').addClass('muncul');
     $('.cliptart').addClass('muncul');
     $('.cliptart1').addClass('muncul');
     $('.cliptart2').addClass('muncul');
