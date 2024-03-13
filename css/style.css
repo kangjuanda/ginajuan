@@ -89,14 +89,8 @@ body.show-scroll {
 }
 
 .lhtundangan {
-	opacity: 0;
 	transform: translate(0, 50px);
 	transition: 0.5s;
-}
-
-.lhtundangan.muncul {
-	opacity: 1;
-	transform: translate(0, 0);
 }
 
 .hero h1, .hero h4, .hero p {
