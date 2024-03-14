@@ -81,8 +81,39 @@ $(window).scroll(function() {
 
 document.addEventListener('DOMContentLoaded', function () {
     var btnLihatUndangan = document.querySelector('.lhtundangan');
+    var body = document.body;
 
+    // Fungsi untuk menambahkan kelas 'show-scroll' pada body dan menyimpan statusnya di localStorage
+    function addShowScrollClass() {
+        body.classList.add('show-scroll');
+        localStorage.setItem('scrollStatus', 'shown');
+    }
+
+    // Fungsi untuk menghapus kelas 'show-scroll' dari body dan menyimpan statusnya di localStorage
+    function removeShowScrollClass() {
+        body.classList.remove('show-scroll');
+        localStorage.setItem('scrollStatus', 'hidden');
+    }
+
+    // Cek status pada localStorage saat halaman dimuat kembali
+    var scrollStatus = localStorage.getItem('scrollStatus');
+    if (scrollStatus === 'shown') {
+        addShowScrollClass();
+    } else {
+        removeShowScrollClass();
+    }
+
+    // Tambahkan event listener untuk tombol
     btnLihatUndangan.addEventListener('click', function () {
-        document.body.classList.add('show-scroll');
+        addShowScrollClass();
+    });
+
+    // Tambahkan event listener untuk event sebelum unload untuk menyimpan status terakhir sebelum halaman dimuat kembali
+    window.addEventListener('beforeunload', function () {
+        if (body.classList.contains('show-scroll')) {
+            localStorage.setItem('scrollStatus', 'shown');
+        } else {
+            localStorage.setItem('scrollStatus', 'hidden');
+        }
     });
 });
