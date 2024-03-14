@@ -14,83 +14,68 @@ $(window).scroll(function() {
 
 
     //home
-    if(wScroll > $('.home').offset().top - 900) {
-        $('.home .psatu').each(function(i) {
+    if(wScroll > $('.home').offset().top - 100) {
+        $('.home .pcliptart, .home .psatu, .couple .pcowok, .couple .pcewek').each(function(i) {
             setTimeout(function() {
-                $('.home .psatu').eq(i).addClass('muncul');
-                $('.home .pcliptart').addClass('muncul');
+                $('.home .pcliptart, .home .psatu, .couple .pcowok, .couple .pcewek').eq(i).addClass('muncul');
             }, 500 * (i+1));
         });
     }
-    //home cowok & cewek
-    if(wScroll > $('.couple').offset().top - 850) {
-        $('.couple .pcowok').addClass('muncul');
-    }
-
-    if(wScroll > $('.couple').offset().top - 750) {
-        $('.couple .pcewek').addClass('muncul');
-    }
-
-    if(wScroll > $('.info').offset().top - 350) {
-        $('.info .cardinformasi').each(function(i) {
+    if(wScroll < $('.home').offset().top - 300) {
+        $('.couple .pcewek, .couple .pcowok, .home .psatu, .home .pcliptart').each(function(i) {
             setTimeout(function() {
-                $('.info .cardinformasi').eq(i).addClass('muncul');
-                $('.info .pcliptart1').addClass('muncul');
-            }, 300 * (i+1));
+                console.log('ok');
+                $('.couple .pcewek, .couple .pcowok, .home .psatu, .home .pcliptart').eq(i).removeClass('muncul');
+            }, 500 * (i+1));
+        })
+    }
+    //informasi acara
+    if(wScroll > $('.info').offset().top - 350) {
+        $('.info .cardinformasi, .info .pcliptart1').each(function(i) {
+            setTimeout(function() {
+                $('.info .cardinformasi, .info .pcliptart1').eq(i).addClass('muncul');
+            }, 1000 * (i+1));
         });
-        // $('.info .cardinformasi').addClass('muncul');
+    }
+    if(wScroll < $('.info').offset().top - 400) {
+        $('.info .cardinformasi, .info .pcliptart1').each(function(i) {
+            setTimeout(function() {
+                $('.info .cardinformasi, .info .pcliptart1').eq(i).removeClass('muncul');
+            }, 600 * (i+1));
+        });
     }
 
     //gallery
-    if(wScroll > $('.gallery').offset().top - 500) {
+    if(wScroll > $('.gallery').offset().top - 350) {
         // console.log('ok');
-        $('.gallery .img-container').each(function(i) {
+        $('.gallery .img-container, .gallery .pcliptart2').each(function(i) {
             setTimeout(function() {
-                $('.gallery .img-container').eq(i).addClass('muncul');
-                $('.gallery .pcliptart2').addClass('muncul');
+                $('.gallery .img-container, .gallery .pcliptart2').eq(i).addClass('muncul');
             }, 500 * (i+1));
         });
     }
-    if(wScroll < $('.gallery').offset().top - 500) {
-        $('.gallery .img-container').each(function(i) {
+    if(wScroll < $('.gallery').offset().top - 400) {
+        $('.gallery .img-container, .gallery .pcliptart2').each(function(i) {
             setTimeout(function() {
                 console.log('ok');
-                $('.gallery .img-container').eq(i).removeClass('muncul');
-                $('.gallery .pcliptart2').removeClass('muncul');
+                $('.gallery .img-container, .gallery .pcliptart2').eq(i).removeClass('muncul');
             }, 500 * (i+1));
         })
     }
     //story
-    if(wScroll > $('.story').offset().top - 500) {
-        // console.log('ok');
-        $('.story .pcliptart3').each(function(i) {
-            setTimeout(function() {
-                $('.story .pcliptart3').addClass('muncul');
-            }, 500 * (i+1));
-        });
+    if(wScroll > $('.story').offset().top - 350) {
+        $('.story .pcliptart3').addClass('muncul');
     }
+    if(wScroll < $('.story').offset().top - 400) {
+        $('.story .pcliptart3').removeClass('muncul');
+    }
+
     //rsvp
-    if(wScroll > $('.rsvp').offset().top - 500) {
-        // console.log('ok');
-        $('.rsvp .pcliptart4').each(function(i) {
-            setTimeout(function() {
-                $('.rsvp .pcliptart4').addClass('muncul');
-            }, 500 * (i+1));
-        });
-        $('.rsvp .pcliptart4-down').each(function(i) {
-            setTimeout(function() {
-                $('.rsvp .pcliptart4-down').addClass('muncul');
-            }, 500 * (i+1));
-        });
+    if(wScroll > $('.rsvp').offset().top - 350) {
+        $('.rsvp .pcliptart4').addClass('muncul');
     }
-    //gifts
-    if(wScroll > $('.gifts').offset().top - 500) {
-        // console.log('ok');
-        $('.gifts .pcliptart5').each(function(i) {
-            setTimeout(function() {
-                $('.gifts .pcliptart5').addClass('muncul');
-            }, 500 * (i+1));
-        });
+    if(wScroll < $('.rsvp').offset().top - 400) {
+        $('.rsvp .pcliptart4').removeClass('muncul');
     }
 });
 
