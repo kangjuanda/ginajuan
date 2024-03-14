@@ -105,7 +105,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Tambahkan event listener untuk tombol
     btnLihatUndangan.addEventListener('click', function () {
+        // Hapus kelas 'show-scroll' sebelum mengarahkan ke bagian lain
+        removeShowScrollClass();
+        // Tambahkan kelas 'show-scroll' setelah mengarahkan ke bagian lain
         addShowScrollClass();
+        // Secara opsional, arahkan ke bagian lain menggunakan animasi gulir (smooth scrolling)
+        // Misalnya, jika Anda ingin menggunakan smooth scrolling ke bagian "Home":
+        // document.querySelector('#home').scrollIntoView({ behavior: 'smooth' });
     });
 
     // Tambahkan event listener untuk event sebelum unload untuk menyimpan status terakhir sebelum halaman dimuat kembali
@@ -117,6 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
 
 //klik kanan & hold tap
 document.addEventListener('contextmenu', function(event) {
@@ -153,4 +160,13 @@ function handleTouchMove(evt) {
     xDown = null;
     yDown = null;                                             
 };
+
+// Ambil tinggi dan lebar layar
+var screenWidth = window.innerWidth;
+var screenHeight = window.innerHeight;
+
+// Atur properti background
+var heroSection = document.querySelector('.hero-section');
+heroSection.style.backgroundSize = screenWidth + 'px ' + screenHeight + 'px';
+
 
