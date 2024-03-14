@@ -589,6 +589,17 @@ body.show-scroll {
 		height: 80px;
 	}
 }
+/* Media query untuk perangkat iOS */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+.hero::before {
+	background-attachment: scroll;
+}
+}
+@support (-webkit-touch-callout: none) {
+  .hero::before {
+    background-attachment: scroll;
+  }
+}
 /* Mobile */
 @media (max-width: 576px) {
 	html {
