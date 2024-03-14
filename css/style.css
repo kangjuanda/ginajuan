@@ -34,6 +34,9 @@ body.show-scroll {
 	background-attachment: fixed;
 	z-index: -1;
 	filter: grayscale();
+	-webkit-background-size: cover;
+	-webkit-background-position: center;
+	-webkit-background-attachment: fixed;
 }
 
 
@@ -158,6 +161,9 @@ body.show-scroll {
 	background-size: cover !important;
 	background-position: center;
 	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-webkit-background-position: center;
+	-webkit-background-attachment: fixed;
 	min-height: 100vh;
 	/* margin-top: -6rem; */
 	padding-top: 7rem;
@@ -330,6 +336,9 @@ body.show-scroll {
 	background-size: cover !important;
 	background-position: center;
 	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-webkit-background-position: center;
+	-webkit-background-attachment: fixed;
 	min-height: 100vh;
 	padding-top: 10rem;
 	padding-bottom: 5rem;
