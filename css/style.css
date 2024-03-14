@@ -31,6 +31,7 @@ body.show-scroll {
 	background-image: url(../img/gallery/gall1.jpeg);
 	background-size: cover;
 	background-position: center;
+	background-attachment: fixed;
 	z-index: -1;
 	filter: grayscale();
 }
@@ -155,6 +156,8 @@ body.show-scroll {
 .home {
 	background-image: url(../img/bgfloral.png);
 	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 	min-height: 100vh;
 	/* margin-top: -6rem; */
 	padding-top: 7rem;
@@ -261,6 +264,25 @@ body.show-scroll {
 	padding-bottom: 8rem;
 }
 
+.btnmaps {
+	background-color: var(--greentea);
+	color: #242424;
+	padding: 10px 30px;
+	border-radius: 50px;
+	display: inline-block;
+}
+
+.info a {
+	text-decoration: none;
+}
+
+.info a:hover {
+	text-decoration: none;
+	background-color: white;
+	color: var(--greentea);
+	box-shadow: 0px 0px 6px #ffffff;
+}
+
 .info .cardinformasi {
 	opacity: 0;
 	transform: translate(0, 50px);
@@ -304,6 +326,10 @@ body.show-scroll {
 }
 
 .gallery {
+	background-image: url(../img/bgfloral.png);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 	min-height: 100vh;
 	padding-top: 10rem;
 	padding-bottom: 5rem;
@@ -352,7 +378,7 @@ body.show-scroll {
 	position: absolute;
 	width: 2px;
 	height: 100%;
-	background-color: var(--greentea);
+	background-color: darkcyan;
 	left: calc(50% - 1px);
 }
 .timeline-item {
@@ -376,7 +402,7 @@ body.show-scroll {
 .timeline-dot {
 	width: 16px;
 	height: 16px;
-	background-color: aquamarine;
+	background-color: cyan;
 	position: absolute;
 	left: calc(50% - 8px);
 	border-radius: 50%;
@@ -393,6 +419,11 @@ body.show-scroll {
 	background-color: var(--greentea);
 	padding: 30px;
 	border-radius: 5px;
+}
+
+.timeline-content img {
+	border-radius: 10px;
+	box-shadow: 4px 4px 0px var(--green2);
 }
 
 .timeline-content h3 {
