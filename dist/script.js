@@ -24,7 +24,7 @@ $(window).scroll(function() {
     if(wScroll < $('.home').offset().top - 300) {
         $('.couple .pcewek, .couple .pcowok, .home .psatu, .home .pcliptart').each(function(i) {
             setTimeout(function() {
-                console.log('ok');
+                // console.log('ok');
                 $('.couple .pcewek, .couple .pcowok, .home .psatu, .home .pcliptart').eq(i).removeClass('muncul');
             }, 500 * (i+1));
         })
@@ -57,7 +57,7 @@ $(window).scroll(function() {
     if(wScroll < $('.gallery').offset().top - 400) {
         $('.gallery .img-container, .gallery .pcliptart2').each(function(i) {
             setTimeout(function() {
-                console.log('ok');
+                // console.log('ok');
                 $('.gallery .img-container, .gallery .pcliptart2').eq(i).removeClass('muncul');
             }, 500 * (i+1));
         })
