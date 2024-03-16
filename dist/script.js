@@ -165,7 +165,7 @@ function handleTouchMove(evt) {
 var screenWidth = window.innerWidth;
 var screenHeight = window.innerHeight;
 
-// Atur properti background
+// Atur properti background mengambil dari class hero di index
 var heroSection = document.querySelector('.hero');
 heroSection.style.backgroundSize = screenWidth + 'px ' + screenHeight + 'px';
 
