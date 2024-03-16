@@ -126,7 +126,7 @@ body.show-scroll {
 .hero button {
 	position: relative;
 	bottom: 0px;
-	top: 80px;
+	top: 50px;
 	font-size: 25px;
 	color: var(--greentea);
 	background-color: transparent;
@@ -137,7 +137,7 @@ body.show-scroll {
 .hero button:hover {
 	/* background-color: var(--greentea); */
 	color: white;
-	transform: translate(0, -20px);
+	transform: translate(0, -10px);
 	transition: 0.5s;
 }
 /* End Hero */
