@@ -169,4 +169,17 @@ var screenHeight = window.innerHeight;
 var heroSection = document.querySelector('.hero');
 heroSection.style.backgroundSize = screenWidth + 'px ' + screenHeight + 'px';
 
+//landing page
+document.addEventListener("DOMContentLoaded", function() {
+    // Menangkap tombol dengan id welcomeBtn
+    var welcomeBtn = document.getElementById('welcomeBtn');
 
+    // Menangani peristiwa klik pada tombol
+    welcomeBtn.addEventListener('click', function() {
+        // Menangkap elemen section dengan id welcome
+        var welcomeSection = document.getElementById('welcome');
+
+        // Gulir secara mulus ke elemen section
+        welcomeSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
