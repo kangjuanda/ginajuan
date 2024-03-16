@@ -33,7 +33,6 @@ body.show-scroll {
 }
 
 .hero {
-	position: relative;
 	min-height: 100vh;
 }
 
@@ -51,6 +50,7 @@ body.show-scroll {
 	-o-background-size: cover;
 	-moz-background-size: cover;
 	z-index: -1;
+	filter: grayscale();
 }
 
 .pcalon {
