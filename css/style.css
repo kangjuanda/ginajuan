@@ -100,11 +100,6 @@ body.show-scroll {
 	transform: translate(0,0);
 }
 
-.lhtundangan {
-	transform: translate(0, 50px);
-	transition: 0.5s;
-}
-
 .hero h1, .hero h4, .hero p {
 	text-shadow: var(--shadow);
 }
@@ -137,7 +132,7 @@ body.show-scroll {
 .hero button:hover {
 	/* background-color: var(--greentea); */
 	color: white;
-	transform: translate(0, -10px);
+	transform: translate(0, -20px);
 	transition: 0.5s;
 }
 /* End Hero */
@@ -592,7 +587,7 @@ body.show-scroll {
 	}
 }
 /* Media query untuk perangkat iOS */
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
+/* @media screen and (-webkit-min-device-pixel-ratio: 0) {
 	.hero::before {
 		background-attachment: scroll;
 	}
@@ -601,7 +596,7 @@ body.show-scroll {
 	.hero::before {
 		background-attachment: scroll;
 	}
-}
+} */
 /* Mobile */
 @media (max-width: 576px) {
 	html {
