@@ -260,16 +260,22 @@ body.show-scroll {
 }
 
 .home .heart {
-	width: 50px;
-	height: 50px;
-	background-color: white;
-	display: flex;
-	border-radius: 50%;
-	box-shadow: 0 0 5px rgb(0 0 0 / 0.5);
 	position: absolute;
+	display: flex;
+	font-size: 100px;
+	text-align: center;
+	color: var(--greentea);
+	text-shadow: var(--shadow);
+	width: 80px;
+	height: 80px;
 	left: 50%;
-	transform: translateX(-50%) translateY(65px);
+	border-radius: 50%;
 	z-index: 100;
+	transform: translateX(-50%) translateY(50px);
+	/* background-color: white; */
+	/* box-shadow: 0 0 5px rgb(0 0 0 / 0.5); */
+	
+	font-family: 'Sacramento', cursive;
 }
 
 .home .heart i {
