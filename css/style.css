@@ -53,6 +53,21 @@ body.show-scroll {
 	filter: grayscale();
 }
 
+.dekorasi1 {
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	transform: scale(2);
+}
+
+.dekorasi2 {
+	position: absolute;
+	left: 50px;
+	bottom: 60px;
+	transform: scale(2);
+	box-shadow: 0, 0, 1px, black;
+}
+
 .pcalon {
 	opacity: 0;
 }
@@ -613,5 +628,15 @@ body.show-scroll {
 	
 	.hero button {
 		top: 50px;
+	}
+	.dekorasi1 {
+		transform: scale(1.4);
+		right: 20px;
+		top: 20px;
+	}
+	.dekorasi2 {
+		transform: scale(1.4);
+		left: 20px;
+		bottom: 20px;
 	}
 }
