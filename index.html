@@ -11,6 +11,16 @@
 
   <!-- MY CSS -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+      #norek {
+        font-size: 24px;
+        color: var(--greentea);
+      }
+      #norekdana {
+        font-size: 24px;
+        color: var(--greentea);
+      }
+    </style>
 
   <!-- Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -335,38 +345,60 @@
           <p class="mt-3 mb-2">Tanpa mengurangi rasa hormat, untuk melengkapi kebahagiaan pengantin, Anda dapat memberikan tanda kasih dengan transfer ke Rekenging/E-money berikut :</p>
         </div>
       </div>
-      <!-- <div id="data"></div> -->
 
-      <div class="row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-5 col-md-6 mt-4">
-          <div class="card text-white bg-dark text-center mx-5">
-              <div class="card-header py-4">
-                <img src="img/bca.png" alt="" class="img-fluid">
-              </div>
-              <div class="card-body">
-                <li class="list-group-item norek">1832027451</li>
-              </div>
-              <div class="card-footer py-4">
-                Gina Fauziah
-              </div>
+      
+      <div class="row mt-5">
+        <div class="col-md-6 mb-3">
+          
+          <div class="card bg-dark text-bg-dark shadow mx-5">
+            <div class="card-body">
+              <table width="100%">
+                <tr>
+                  <td class="px-2">
+                    <span id="norek">1832027451</span>
+                  </td>
+                  <td class="text-center" style="border-left:3px solid white;">
+                    <img src="img/bca.png" width="70px" class="img-fluid">
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-2">Gina fauziah</td>
+                  <td width="38%" class="text-center" style="border-left:3px
+                  solid white;">
+                    <button id="copyButton" class="btn btn-sm
+                    btn-outline-light"><span class="fa
+                    fa-copy" style="color: var(--greentea);"></span> Copy</button>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
-        <div class="col-lg-5 col-md-6 mt-4">
-          <div class="card text-white bg-dark text-center mx-5">
-              <div class="card-header py-4">
-                <img src="img/dana.png" alt="" class="img-fluid">
-              </div>
-              <div class="card-body">
-                <!-- <img src="img/qr.png"> -->
-                <li class="list-group-item norek">083819865177</li>
-              </div>
-              <div class="card-footer py-4">
-                Muhamad Juanda
-              </div>
+        <div class="col-md-6">
+          <div class="card bg-dark text-bg-dark shadow mx-5">
+            <div class="card-body">
+              <table width="100%">
+                <tr>
+                  <td class="px-2">
+                    <span id="norekdana">083819865177</span>
+                  </td>
+                  <td class="text-center" style="border-left:3px solid white;">
+                    <img src="img/dana.png" width="70px" class="img-fluid">
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-2">Muhamad Juanda</td>
+                  <td width="38%" class="text-center" style="border-left:3px
+                  solid white;">
+                    <button id="copydanaButton" class="btn btn-sm
+                    btn-outline-light"><span class="fa
+                    fa-copy" style="color: var(--greentea);"></span> Copy</button>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
-        <div class="col-lg-1"></div>
       </div>
     </div>
   </section>
@@ -417,6 +449,28 @@
       });
     });
   </script>
+  <!-- Copy Paste -->
+    <script>
+      // Untuk norek dan copyButton
+      document.getElementById("copyButton").addEventListener("click", function() {
+        var norek = document.getElementById("norek").innerText;
+        navigator.clipboard.writeText(norek).then(function() {
+          console.log("Text copied to clipboard");
+        }, function(error) {
+          console.error("Unable to copy text: ", error);
+        });
+      });
+      
+      // Untuk norekdana dan copydanaButton
+      document.getElementById("copydanaButton").addEventListener("click", function() {
+        var norekDana = document.getElementById("norekdana").innerText;
+        navigator.clipboard.writeText(norekDana).then(function() {
+          console.log("Text copied to clipboard");
+              }, function(error) {
+          console.error("Unable to copy text: ", error);
+        });
+      });
+    </script>
   <script>
     simplyCountdown('.simply-countdown', {
           year: 2024, // required
