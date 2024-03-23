@@ -481,7 +481,7 @@ body.show-scroll {
 }
 
 .gifts, .rsvp {
-	min-height: 80vh;
+/* 	min-height: 80vh; */
 	padding-top: 10rem;
 	padding-bottom: 5rem;
 }
@@ -498,10 +498,6 @@ body.show-scroll {
 
 .gifts .bank {
 	color: darkblue;
-}
-
-.gifts img {
-	width: 30%;
 }
 
 .gifts .qris {
@@ -599,9 +595,6 @@ body.show-scroll {
 	.timeline-dot {
 		left: 0;
 	}
-	.gifts img {
-		width: 15%;
-	}
 	.gifts .qris {
 		width: 80px;
 		height: 80px;
@@ -644,5 +637,8 @@ body.show-scroll {
 		transform: scale(1.4);
 		left: 20px;
 		bottom: 20px;
+	}
+	#welcomeBtn {
+	  font-size: 18px;
 	}
 }
