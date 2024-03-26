@@ -49,7 +49,7 @@
       <h1>Gina & Juan</h1>
       <p>Akan melangsungkan resepsi pernikahan dalam:</p>
       <div class="simply-countdown"></div>
-        <div id="welcome" class="mt-5"></div>
+        <div id="welcome1" class="mt-5"></div>
         <button onclick="playAudio()" id="welcomeBtn" class="lhtundangan mt-5">
 <!--           <span class="fa-solid fa-angles-down"></span> -->
           Lihat Undangan
@@ -558,7 +558,7 @@
       } else {
           // Jika ada hash atau URL memiliki jalur yang berbeda dari '/'
           // Mencari elemen div dengan id "welcome"
-          var welcomeDiv = document.getElementById("welcome");
+          var welcomeDiv = document.getElementById("welcome1");
           // Memperbarui teks di dalam elemen div sesuai dengan nilai hash dari URL
           welcomeDiv.innerHTML = "<p>Kepada Yt.</p><p><strong>" + decodeURIComponent(hash) + "</strong></p>";
       }
