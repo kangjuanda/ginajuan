@@ -14,14 +14,14 @@ $(window).scroll(function() {
 
 
     //home
-    if(wScroll > $('.home').offset().top - 100) {
+    if(wScroll > $('.home').offset().top - 500) {
         $('.home .pcliptart, .home .psatu, .couple .pcowok, .couple .pcewek').each(function(i) {
             setTimeout(function() {
                 $('.home .pcliptart, .home .psatu, .couple .pcowok, .couple .pcewek').eq(i).addClass('muncul');
             }, 500 * (i+1));
         });
     }
-    if(wScroll < $('.home').offset().top - 300) {
+    if(wScroll < $('.home').offset().top - 800) {
         $('.couple .pcewek, .couple .pcowok, .home .psatu, .home .pcliptart').each(function(i) {
             setTimeout(function() {
                 // console.log('ok');
@@ -111,7 +111,13 @@ document.addEventListener('DOMContentLoaded', function () {
         addShowScrollClass();
         // Secara opsional, arahkan ke bagian lain menggunakan animasi gulir (smooth scrolling)
         // Misalnya, jika Anda ingin menggunakan smooth scrolling ke bagian "Home":
-        // document.querySelector('#home').scrollIntoView({ behavior: 'smooth' });
+        var homeElement = document.getElementById("welcome");
+        var homePosition = homeElement.offsetTop;
+        // Scroll ke posisi 0 dari elemen target (bagian "home")
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 
     // Tambahkan event listener untuk event sebelum unload untuk menyimpan status terakhir sebelum halaman dimuat kembali
@@ -123,6 +129,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+
 
 
 //klik kanan & hold tap
