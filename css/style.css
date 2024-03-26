@@ -2,6 +2,11 @@
 	--greentea : #d0f0c0;
 	--green2 : #efeede;
 	--bg : #242424;
+
+	--yellow : #fff3c7;
+	--peach : #fec7b4;
+	--pink1 : #fc819e;
+	--pink2 : #f7418f;
 	--shadow : 0 2px 2px rgb(0 0 0 / 0.5);
 }
 
@@ -17,7 +22,7 @@ body.show-scroll {
 }
 
 .namaortu {
-	color: darkgreen;
+	color: var(--pink2);
 }
 
 /* Hero */
@@ -122,7 +127,7 @@ body.show-scroll {
 .hero h1 {
 	font-family: 'Sacramento', cursive;
 	font-size: 6rem;
-	color: var(--greentea);
+	color: var(--pink1);
 }
 
 .hero p {
@@ -138,7 +143,7 @@ body.show-scroll {
 	bottom: 0px;
 	top: 50px;
 	font-size: 25px;
-	color: var(--greentea);
+	color: var(--pink1);
 	background-color: transparent;
 	border: none;
 	/* box-shadow: var(--shadow); */
@@ -180,7 +185,7 @@ body.show-scroll {
 	background-size: cover !important;
 	background-position: center;
 	min-height: 100vh;
-	padding-top: 7rem;
+	padding-top: 4rem;
 	padding-bottom: 5rem;
 }
 
@@ -222,15 +227,11 @@ body.show-scroll {
 .home h2, .info h2,
 .gallery h2, .story h2,
 .gifts h2, .rsvp h2 {
-	color: var(--greentea);
+	color: var(--pink1);
 	font-family: 'Sacramento', cursive;
 	font-size: 5rem;
 	font-weight: bold;
 	text-shadow: var(--shadow);
-}
-
-.rsvp h2 {
-	font-size: 32px;
 }
 
 .home h3 {
@@ -251,7 +252,7 @@ body.show-scroll {
 .home .couple h3 {
 	font-family: 'Sacramento', cursive;
 	font-size: 2.4rem;
-	color: var(--greentea);
+	color: var(--pink2);
 	text-shadow: var(--shadow);
 }
 
@@ -264,7 +265,7 @@ body.show-scroll {
 	display: flex;
 	font-size: 100px;
 	text-align: center;
-	color: var(--greentea);
+	color: var(--pink2);
 	text-shadow: var(--shadow);
 	width: 80px;
 	height: 80px;
@@ -286,13 +287,17 @@ body.show-scroll {
 .info {
 	background-color: var(--bg);
 	color: white;
-	padding-top: 10rem;
+	padding-top: 7rem;
 	padding-bottom: 8rem;
 }
 
+.tanggal {
+	color: var(--pink1);
+}
+
 .btnmaps {
-	background-color: var(--greentea);
-	color: #242424;
+	background-color: var(--pink2);
+	color: white;
 	padding: 10px 30px;
 	border-radius: 50px;
 	display: inline-block;
@@ -303,9 +308,6 @@ body.show-scroll {
 }
 
 .info a:hover {
-	text-decoration: none;
-	background-color: white;
-	color: var(--greentea);
 	box-shadow: 0px 0px 6px #ffffff;
 }
 
@@ -353,14 +355,14 @@ body.show-scroll {
 
 .gallery {
 	min-height: 100vh;
-	padding-top: 10rem;
+	padding-top: 7rem;
 	padding-bottom: 5rem;
 	background-color: white;
 }
 
 
 .gallery img {
-	filter: sepia(40%);
+	filter: sepia(10%);
 }
 
 .gallery img:hover {
@@ -380,7 +382,7 @@ body.show-scroll {
 
 .story {
 	min-height: 100vh;
-	padding-top: 10rem;
+	padding-top: 7rem;
 	padding-bottom: 5rem;
 	background-color: var(--green2);
 }
@@ -401,7 +403,7 @@ body.show-scroll {
 	position: absolute;
 	width: 2px;
 	height: 100%;
-	background-color: darkcyan;
+	background-color: var(--pink1);
 	left: calc(50% - 1px);
 }
 .timeline-item {
@@ -425,7 +427,7 @@ body.show-scroll {
 .timeline-dot {
 	width: 16px;
 	height: 16px;
-	background-color: cyan;
+	background-color: var(--pink2);
 	position: absolute;
 	left: calc(50% - 8px);
 	border-radius: 50%;
@@ -439,7 +441,7 @@ body.show-scroll {
 }
 
 .timeline-content {
-	background-color: var(--greentea);
+	background-color: var(--bg);
 	padding: 30px;
 	border-radius: 5px;
 }
@@ -451,13 +453,13 @@ body.show-scroll {
 
 .timeline-content h3 {
 	font-size: 16px;
-	color: var(--bg);
+	color: var(--pink1);
 	margin: 0 0 15px;
 	text-transform: capitalize;
 }
 
 .timeline-content p {
-	color: #444;
+	color: white;
 	font-size: 12px;
 	line-height: 22px;
 }
@@ -468,22 +470,36 @@ body.show-scroll {
 	color: white;
 }
 
+.alert1 {
+    padding: 5px 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+	margin-top: 10px;
+}
+
+.alert-success1 {
+	font-size: 16px;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
 .rsvp button {
-	background-color: var(--greentea);
-	border: 1px solid var(--green2);
-	color: #242424;
+	background-color: var(--pink2);
+	border: 1px solid var(--pink1);
+	color: white;
 }
 
 .rsvp button:hover {
-	background-color: white;
-	border: 1px solid var(--green2);
-	color: var(--greentea);
+	background-color: var(--pink1);
+	border: 1px solid var(--pink2);
+	color: var(--yellow);
 }
 
 .gifts, .rsvp {
 /* 	min-height: 80vh; */
-	padding-top: 10rem;
-	padding-bottom: 5rem;
+	padding-top: 7rem;
+	padding-bottom: 3rem;
 }
 
 .gifts {
@@ -533,10 +549,6 @@ body.show-scroll {
 	transition: 0.5s;
 }
 
-.rsvp .pcliptart4-down {
-	transform: rotate(180deg);
-}
-
 .home .pcliptart.muncul, 
 .info .pcliptart1.muncul, 
 .gallery .pcliptart2.muncul, 
@@ -546,11 +558,6 @@ body.show-scroll {
 .gifts .pcliptart5.muncul {
 	opacity: 1;
 	transform: translate(0, 0) translateX(-50%);
-}
-
-.rsvp .pcliptart4-down.muncul {
-	transform: translateX(-50%) rotate(180deg);
-	position: absolute;
 }
 
 /* Media Query */
@@ -628,6 +635,11 @@ body.show-scroll {
 	.hero button {
 		top: 50px;
 	}
+
+	.rsvp h2 {
+		font-size: 32px;
+	}
+
 	.dekorasi1 {
 		transform: scale(1.4);
 		right: 20px;
