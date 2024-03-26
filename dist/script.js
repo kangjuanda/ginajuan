@@ -34,10 +34,10 @@ $(window).scroll(function() {
         $('.info .cardinformasi, .info .pcliptart1').each(function(i) {
             setTimeout(function() {
                 $('.info .cardinformasi, .info .pcliptart1').eq(i).addClass('muncul');
-            }, 1000 * (i+1));
+            }, 600 * (i+1));
         });
     }
-    if(wScroll < $('.info').offset().top - 400) {
+    if(wScroll < $('.info').offset().top - 700) {
         $('.info .cardinformasi, .info .pcliptart1').each(function(i) {
             setTimeout(function() {
                 $('.info .cardinformasi, .info .pcliptart1').eq(i).removeClass('muncul');
