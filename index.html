@@ -14,11 +14,11 @@
     <style>
       #norek {
         font-size: 24px;
-        color: var(--pink1);
+        color: var(--greentea);
       }
       #norekdana {
         font-size: 24px;
-        color: var(--pink1);
+        color: var(--greentea);
       }
     </style>
 
@@ -292,12 +292,15 @@
           <p class="mt-3 mb-5">Isi form di bawah ini untuk melakukan konfirmasi kehadiran :</p>
         </div>
       </div>
+      <div class="mx-5">
+        <div id="alertMessage" class="text-center alert1"></div>
+      </div>
       <form id="my-form" method="post" action="https://script.google.com/macros/s/AKfycbz2z9YIcZHDYrsE3jrdAZYZiDsqjVFJW--beZDxZaBVhRA5dstaXSur87zJnFURLKQ/exec">
-        <div class="card text-white bg-dark mb-5 mx-5">
+        <div class="card text-white bg-dark mb-1 mx-5">
           <div class="card-body">
             <div class="row mb-2">
               <div class="col-lg-3"></div>
-              <div class="col-lg-3 col-md-3 mt-4">
+              <div class="col-lg-3 col-md-3 mt-2">
                   <label for="nama" class="form-label">
                     Nama
                   </label>
@@ -326,14 +329,19 @@
               </div>
               <div class="col-lg-3"></div>
             </div>
-            <div class="row mb-4">
+            <div class="row">
               <div class="col-lg-4"></div>
               <div class="d-grid gap-2 col-lg-4 mx-auto">
                 <button name="kirim" class="btn btn-block btn-danger">Kirim</button>
-                <div id="alertMessage" class="text-center alert1"></div>
               </div>
               <div class="col-lg-4"></div>
             </div>
+          </div>
+        </div>
+
+        <div class="card text-bg-light mx-5 mt-3">
+          <div class="card-body" style="overflow: auto; max-height: 150px;">
+            <div id="dataContainer"></div>
           </div>
         </div>
       </form>
@@ -420,7 +428,7 @@
 
 
   <audio id="myAudio">
-    <source src="mp3/music.mp3" type="audio/mp3">
+    <source src="" type="audio/mp3">
     <!-- mp3/music.mp3 -->
     Your browser does not support the audio element.
   </audio>
@@ -460,6 +468,82 @@
       });
     });
   </script>
+
+  <script>
+    // Definisikan URL API dari Google Apps Script
+    const apiUrl = 'https://script.google.com/macros/s/AKfycbximSuwO6eXi4sdYX3iB_kMcKhTTasKOO0y2nQNQ4RjkvyF4JTV6QYkeBPRcyZuwy6b/exec'; // Ganti dengan URL API yang Anda dapatkan setelah deployment
+
+    // Fungsi untuk mengambil data dari API
+    async function fetchDataFromApi() {
+        try {
+            const response = await fetch(apiUrl);
+            if (!response.ok) {
+                throw new Error('Terjadi kesalahan saat mengambil data');
+            }
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+    // Fungsi untuk menampilkan data dari API
+    async function displayDataFromApi() {
+        try {
+            const data = await fetchDataFromApi();
+            if (data && data.length > 1) { // Memastikan ada lebih dari satu baris data
+                const container = document.getElementById('dataContainer');
+
+                // Iterasi setiap baris data, dimulai dari baris kedua
+                for (let i = 1; i < data.length; i++) {
+                    const row = data[i];
+
+                    // Buat elemen-elemen HTML
+                    const card = document.createElement('div');
+                    card.classList.add('card', 'text-bg-dark', 'mb-2');
+
+                    const cardHeader = document.createElement('div');
+                    cardHeader.classList.add('card-header');
+                    
+                    // Buat span untuk menampung ikon dan teks konfirmasi
+                    const confirmationSpan = document.createElement('span');
+                    confirmationSpan.classList.add('badge');
+                    if (row[2] === 'Hadir') {
+                        confirmationSpan.classList.add('text-bg-success');
+                        confirmationSpan.innerHTML = '<i class="fa-solid fa-circle-check"></i> Hadir';
+                    } else if (row[2] === 'Tidak Hadir') {
+                        confirmationSpan.classList.add('text-bg-danger');
+                        confirmationSpan.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> Tidak Hadir';
+                    }
+                    
+                    // Gabungkan span konfirmasi ke dalam header
+                    cardHeader.appendChild(document.createTextNode(`${row[1]} | `)); // Menampilkan nama
+                    cardHeader.appendChild(confirmationSpan); // Menampilkan konfirmasi
+
+                    const cardBody = document.createElement('div');
+                    cardBody.classList.add('card-body');
+                    cardBody.textContent = row[3]; // Ucapan dari data
+
+                    // Gabungkan elemen-elemen HTML
+                    card.appendChild(cardHeader);
+                    card.appendChild(cardBody);
+
+                    // Tambahkan card ke dalam container
+                    container.appendChild(card);
+                }
+            } else {
+                console.log('Tidak ada data yang diterima dari API.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    // Menjalankan fungsi displayDataFromApi() saat tampilan selesai dimuat
+    document.addEventListener('DOMContentLoaded', displayDataFromApi);
+
+
+  </script>
+
   <!-- Copy Paste -->
     <script>
       // Untuk norek dan copyButton
