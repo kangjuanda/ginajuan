@@ -37,20 +37,14 @@ body.show-scroll {
 
 .surah .ayat {
 	transform: scale(0);
-	transition: transform 0.5s ease;
+	transition: transform 0.3s ease;
 }
 
 .surah .ayat.muncul {
 	transform: scale(1);
 }
 
-.endpage {
-	background-color: white;
-	width: 100%;
-	box-shadow: 0 -5px 100px rgb(180, 180, 180);
-}
-
-.endpage .pengantin {
+.info .pengantin {
 	font-family: 'Sacramento', cursive;
 	font-size: 3rem;
 	color: var(--pink2);
@@ -497,8 +491,7 @@ body.show-scroll {
 /* End Timeline */
 
 .rsvp {
-	background-color: var(--bg);
-	color: white;
+	background-color: white;
 }
 
 .alert1 {
@@ -529,12 +522,13 @@ body.show-scroll {
 
 .gifts, .rsvp {
 /* 	min-height: 80vh; */
-	padding-top: 7rem;
+	padding-top: 5rem;
 	padding-bottom: 3rem;
 }
 
 .gifts {
-	background-color: white;
+	background-color: var(--bg);
+	color: white;
 }
 
 .gifts .norek {
