@@ -31,7 +31,7 @@ $(window).scroll(function() {
     }
 
     //surah
-    if(wScroll > $('.surah').offset().top - 300) {
+    if(wScroll > $('.surah').offset().top - 600) {
         $('.surah .ayat').each(function(i) {
             setTimeout(function() {
                 $('.surah .ayat').eq(i).addClass('muncul');
