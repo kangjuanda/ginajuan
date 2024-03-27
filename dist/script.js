@@ -29,6 +29,23 @@ $(window).scroll(function() {
             }, 500 * (i+1));
         })
     }
+
+    //surah
+    if(wScroll > $('.surah').offset().top - 300) {
+        $('.surah .ayat').each(function(i) {
+            setTimeout(function() {
+                $('.surah .ayat').eq(i).addClass('muncul');
+            }, 500 * (i+1));
+        });
+    }
+    if(wScroll < $('.surah').offset().top - 800) {
+        $('.surah .ayat').each(function(i) {
+            setTimeout(function() {
+                $('.surah .ayat').eq(i).removeClass('muncul');
+            }, 500 * (i+1));
+        });
+    }
+
     //informasi acara
     if(wScroll > $('.info').offset().top - 350) {
         $('.info .cardinformasi, .info .pcliptart1').each(function(i) {
