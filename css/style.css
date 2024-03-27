@@ -25,6 +25,37 @@ body.show-scroll {
 	color: var(--pink2);
 }
 
+.surah {
+	width: 100%;
+	background-color: white;
+	box-shadow: 0 -5px 100px rgb(180, 180, 180);
+}
+
+.surah p {
+	font-size: 1.4rem;
+}
+
+.surah .ayat {
+	transform: scale(0);
+	transition: transform 0.5s ease;
+}
+
+.surah .ayat.muncul {
+	transform: scale(1);
+}
+
+.endpage {
+	background-color: white;
+	width: 100%;
+	box-shadow: 0 -5px 100px rgb(180, 180, 180);
+}
+
+.endpage .pengantin {
+	font-family: 'Sacramento', cursive;
+	font-size: 3rem;
+	color: var(--pink2);
+}
+
 /* Hero */
 .hero::before {
 	content: '';
@@ -312,14 +343,13 @@ body.show-scroll {
 }
 
 .info .cardinformasi {
-	opacity: 0;
-	transform: translate(0, 50px);
+	/* opacity: 0; */
+	transform: scale(0);
 	transition: 0.5s;
 }
 
 .info .cardinformasi.muncul {
-	opacity: 1;
-	transform: translate(0, 0);
+	transform: scale(1);
 }
 
 .info .alamat {
@@ -385,6 +415,7 @@ body.show-scroll {
 	padding-top: 7rem;
 	padding-bottom: 5rem;
 	background-color: var(--green2);
+	box-shadow: 0 -5px 100px rgb(180, 180, 180);
 }
 
 
