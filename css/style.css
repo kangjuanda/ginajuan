@@ -172,7 +172,7 @@ body.show-scroll {
 .hero button {
 	position: relative;
 	bottom: 0px;
-	top: 50px;
+	top: 30px;
 	font-size: 25px;
 	color: var(--pink1);
 	background-color: transparent;
@@ -683,5 +683,8 @@ body.show-scroll {
 	}
 	#welcomeBtn {
 	  font-size: 18px;
+	}
+	.hero h4 {
+		margin-top: 20px;
 	}
 }
