@@ -386,7 +386,7 @@ body.show-scroll {
 
 
 .gallery img {
-	filter: sepia(10%);
+	filter: sepia(25%);
 }
 
 .gallery img:hover {
